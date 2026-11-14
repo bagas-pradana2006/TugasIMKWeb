@@ -2,7 +2,7 @@
 
 Platform informasi event Fakultas Ilmu Komputer Universitas Brawijaya. Proyek Akhir Interaksi Manusia dan Komputer (IMK) Tahap 2, **Kelompok 4**.
 
-🔗 **Demo:** https://bagas-pradana2006.github.io/TugasIMKWeb/
+🔗 **Demo:** [https://bagas-pradana2006.github.io/TugasIMKWeb/](https://bagas-pradana2006.github.io/TugasIMKWeb/)
 
 Website ini adalah implementasi desain High-Fidelity dari laporan Tahap 2. Dibuat hanya dengan **HTML + CSS, tanpa JavaScript**.
 
