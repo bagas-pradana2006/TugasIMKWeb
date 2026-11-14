@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14213D">
+<title>Beranda · Kompas Filkom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+<a class="sr-only" href="#isi">Lewati ke konten</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Kompas Filkom, ke Beranda"><span class="logo-word" aria-hidden="true">k<svg class="logo-o" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="#14213D" stroke-width="3.4"/><path d="M8.6 15.4 15.6 8.4" stroke="#F0600C" stroke-width="2.6" stroke-linecap="round"/></svg>mpas</span><span class="logo-sub" aria-hidden="true"><b>Fil</b>kom</span></a>
+    <nav class="top-nav" aria-label="Menu utama"><a href="index.html" aria-current="page">Beranda</a><a href="jelajah.html">Jelajah</a><a href="riwayat.html">Riwayat</a></nav>
+    <div class="bell-wrap">
+      <button class="icon-btn bell-btn" type="button" popovertarget="notif" aria-label="Notifikasi, 2 belum dibaca"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg><span class="dot"></span></button>
+    </div>
+  </div>
+</header>
+<div id="notif" class="notif" popover>
+  <h2>Notifikasi</h2>
+  <ul>
+    <li>Pendaftaran <a href="event/artropolis-mini-terrarium.html">Artropolis 2026</a> dibuka hari ini.<small>Kam, 22 Okt</small></li>
+    <li><a href="riwayat.html#tiket-scope-2026">SCOPE 2026</a> hari Sabtu pukul 10.30. Tiketmu ada di Riwayat.<small>Kam, 22 Okt</small></li>
+  </ul>
+</div>
+<main id="isi" class="wrap page">
+  <p class="hello">Halo, Bagas</p>
+  <h1 class="h1">Ada apa di Filkom minggu ini?</h1>
+  <div class="home-grid">
+    <div>
+      <section aria-labelledby="t-sorotan">
+        <h2 class="h2" id="t-sorotan">Sorotan minggu ini</h2>
+        <div class="ev-list"><a class="ev j-seminar o-hmdtif has-cert" href="event/scope-2026.html"><span class="date" aria-hidden="true"><b>24</b><span>Okt</span></span><span class="ev-body"><span class="jenis">Seminar</span><span class="ev-title">SCOPE 2026: Scholarship Preparation</span><span class="sr-only">Sabtu, 24 Oktober 2026.</span><span class="meta">HMDTIF · Sab, 10.30 · Teater Heuristik, Gedung A</span><span class="badges"><span class="badge badge-ok"><span aria-hidden="true">✓</span> Bersertifikat</span><span class="badge badge-warn"><span aria-hidden="true">!</span> Kuota terbatas</span></span></span></a><a class="ev j-workshop o-hmdtif" href="event/magang-go-2026.html"><span class="date" aria-hidden="true"><b>25</b><span>Okt</span></span><span class="ev-body"><span class="jenis">Workshop</span><span class="ev-title">Magang GO! 2026: Workshop Persiapan Magang</span><span class="sr-only">Minggu, 25 Oktober 2026.</span><span class="meta">HMDTIF · Min, 08.30 · Mini Theater Heuristic, Gedung A1</span></span></a></div>
+      </section>
+      <section aria-labelledby="t-semua">
+        <h2 class="h2" id="t-semua">Semua event</h2>
+        <div class="ev-list"><a class="ev j-seminar o-panitia-karadoks has-cert" href="event/karadoks-2026.html"><span class="date" aria-hidden="true"><b>26</b><span>Okt</span></span><span class="ev-body"><span class="jenis">Seminar</span><span class="ev-title">KARADOKS: Film Screening &amp; Talkshow</span><span class="sr-only">Senin, 26 Oktober 2026.</span><span class="meta">Panitia KARADOKS · Sen, 13.00 · Auditorium Algoritma, Gedung G</span><span class="badges"><span class="badge badge-ok"><span aria-hidden="true">✓</span> Bersertifikat</span></span></span></a><a class="ev j-workshop o-panitia-artropolis" href="event/artropolis-mini-terrarium.html"><span class="date" aria-hidden="true"><b>27</b><span>Okt</span></span><span class="ev-body"><span class="jenis">Workshop</span><span class="ev-title">Artropolis 2026: Workshop Mini Terrarium</span><span class="sr-only">Selasa, 27 Oktober 2026.</span><span class="meta">Panitia Artropolis · Sel, 12.10 · GKM Lantai 3</span><span class="badges"><span class="badge badge-warn"><span aria-hidden="true">!</span> Kuota terbatas</span><span class="badge badge-neutral">Berbayar Rp65.000</span></span></span></a></div>
+        <a class="btn btn-secondary more-btn" href="jelajah.html">Lihat lainnya</a>
+      </section>
+    </div>
+    <aside class="home-aside" aria-label="Ringkasan">
+      <section class="side-card tinted">
+        <h2 class="h3">Tiketmu berikutnya</h2>
+        <div class="next-ticket"><span class="date" aria-hidden="true"><b>24</b><span>Okt</span></span><div><b>SCOPE 2026: Scholarship Preparation</b><span class="meta">Sab, 10.30 · Teater Heuristik</span></div></div>
+        <a class="btn btn-secondary btn-block" href="riwayat.html#tiket-scope-2026">Lihat tiket di Riwayat</a>
+      </section>
+      <section class="side-card">
+        <h2 class="h3">Jangan sampai lupa</h2>
+        <div class="remind"><span class="badge badge-warn"><span aria-hidden="true">!</span> Pendaftaran dibuka Kam, 22 Okt</span><a href="event/artropolis-mini-terrarium.html">Artropolis 2026: Workshop Mini Terrarium</a></div>
+        <div class="remind"><span class="badge badge-warn"><span aria-hidden="true">!</span> Final lomba Jum, 6 Nov</span><a href="event/dekan-cup-dies-natalis-15.html">Dekan Cup &amp; Dies Natalis ke-15 FILKOM UB</a></div>
+      </section>
+    </aside>
+  </div>
+</main>
+<footer class="site-foot d-only"><div class="wrap">Kompas Filkom dikelola Fakultas Ilmu Komputer, Universitas Brawijaya.</div></footer>
+<div class="dock"><nav class="bottom-nav" aria-label="Menu utama"><a href="index.html" aria-current="page"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/></svg><span>Beranda</span></a><a href="jelajah.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><span>Jelajah</span></a><a href="riwayat.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Riwayat</span></a></nav></div>
+</body>
+</html>
