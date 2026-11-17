@@ -744,6 +744,9 @@ input[type="checkbox"]:not(.switch) {
 @keyframes putar { to { transform: rotate(360deg); } }
 
 /* Poster event (opsional, hanya di halaman detail) */
-.poster { margin-top: 16px; }
-.poster img { display: block; width: 100%; max-width: 420px; height: auto; border-radius: var(--radius); border: 1px solid var(--line); }
-@media (min-width: 768px) { .poster { margin-top: 24px; } }
+.poster { margin-top: 32px; max-width: 420px; }
+.poster a { display: block; border-radius: var(--radius); }
+.poster img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); }
+.poster a:hover img { border-color: var(--border); }
+.poster figcaption { margin-top: 8px; font-size: 13px; line-height: 18px; color: var(--text-2); }
+@media (max-width: 767px) { .poster { margin-inline: auto; } }
