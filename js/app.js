@@ -78,5 +78,11 @@ if (cari) {
   cari.addEventListener("input", saring);
   cari.form.addEventListener("change", saring);
   cari.form.addEventListener("reset", () => setTimeout(saring));
-  cari.form.addEventListener("submit", (ev) => ev.preventDefault()); // Enter tidak memuat ulang halaman
+  // Enter: tidak memuat ulang halaman, tutup keyboard HP, lalu gulir ke hasil
+  cari.form.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    saring();
+    cari.blur();
+    document.getElementById("t-hasil").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 }
