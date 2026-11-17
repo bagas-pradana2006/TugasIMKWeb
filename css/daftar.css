@@ -1,0 +1,17 @@
+/* daftar.css: daftar "Lengkapi dulu" di Registrasi, dibuat dari data form.
+   Tiap isian wajib yang belum valid memunculkan namanya di atas tombol kirim. */
+.reg-form:has(#f-nama:invalid) .miss-nama { display: list-item; }
+.reg-form:has(#f-nim:invalid) .miss-nim { display: list-item; }
+.reg-form:has(#f-email:invalid) .miss-email { display: list-item; }
+.reg-form:has(#f-prodi:invalid) .miss-prodi { display: list-item; }
+.reg-form:has(#f-angkatan:invalid) .miss-angkatan { display: list-item; }
+.reg-form:has(#f-wa:invalid) .miss-wa { display: list-item; }
+.reg-form:has(#f-brand:invalid) .miss-brand { display: list-item; }
+.reg-form:has(#f-kategori:invalid) .miss-kategori { display: list-item; }
+.reg-form:has(#f-htm:invalid) .miss-htm { display: list-item; }
+.reg-form:has(#f-tim:invalid) .miss-tim { display: list-item; }
+.reg-form:has(#f-anggota:invalid) .miss-anggota { display: list-item; }
+.reg-form:has(#f-tantangan:invalid) .miss-tantangan { display: list-item; }
+.reg-form:has(#f-cabang:invalid) .miss-cabang { display: list-item; }
+.reg-form:has(#f-status:invalid) .miss-status { display: list-item; }
+.reg-form:has(#f-redeem:invalid) .miss-redeem { display: list-item; }

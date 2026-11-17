@@ -459,7 +459,17 @@ select.input {
 input[type="checkbox"]:not(.switch) {
   flex: none; width: 24px; height: 24px; margin: 0; accent-color: var(--navy); cursor: pointer;
 }
-.aksi:has(.setuju:not(:checked)) .btn-daftar { opacity: .45; pointer-events: none; }
+/* Tombol asli baru muncul setelah dicentang; sebelumnya tampil tiruan nonaktif
+   (elemen tersembunyi tidak bisa difokus atau ditekan lewat keyboard) */
+.btn-off { opacity: .45; cursor: not-allowed; }
+.aksi .btn-daftar { display: none; }
+.aksi:has(.setuju:checked) .btn-daftar { display: flex; }
+.aksi:has(.setuju:checked) .btn-off { display: none; }
+.aksi-terdaftar { display: none; }
+.sudah-daftar .aksi-daftar { display: none; }
+.sudah-daftar .aksi-terdaftar { display: grid; }
+.warn-detail { display: block; }
+@media (max-width: 767px) { .aksi .warn-detail { display: none; } .aksi .warn-box { padding: 10px 14px; } }
 
 /* ---------- 12. Registrasi ---------- */
 .reg-head .mini {
@@ -510,7 +520,12 @@ input[type="checkbox"]:not(.switch) {
 .kirim-bar .hint { display: none; text-align: center; font-size: 15px; color: var(--text-2); }
 .reg-form:has(#konfirm:not(:checked)) .hint-a { display: block; }
 .reg-form:has(#konfirm:checked):has(:invalid) .hint-b { display: block; }
-.reg-form:has(:invalid) .btn-kirim { opacity: .45; pointer-events: none; box-shadow: none; }
+.kirim-bar .btn-off { display: none; }
+.reg-form:has(:invalid) .btn-kirim { display: none; }
+.reg-form:has(:invalid) .btn-off { display: flex; }
+.hint-b ul { list-style: disc; padding-left: 20px; margin-top: 4px; text-align: left; color: var(--danger); font-weight: 600; }
+.hint-b .miss { display: none; }
+.hint-b > p { text-align: left; }
 @media (max-width: 767px) {
   .kirim-bar {
     position: sticky; bottom: calc(var(--dock-h) + env(safe-area-inset-bottom)); z-index: 10;
@@ -520,7 +535,7 @@ input[type="checkbox"]:not(.switch) {
 }
 @media (min-width: 768px) {
   .kirim-bar { justify-items: start; }
-  .kirim-bar .btn-kirim { width: 400px; max-width: 100%; order: -1; }
+  .kirim-bar .btn-kirim, .kirim-bar .btn-off { width: 400px; max-width: 100%; order: -1; }
   .kirim-bar .hint { text-align: left; }
 }
 
@@ -689,3 +704,46 @@ input[type="checkbox"]:not(.switch) {
 .field-row + .field-row, .field-row + .field { margin-top: 16px; }
 @media (max-width: 767px) { .field-row.stack-m { grid-template-columns: 1fr; gap: 16px; } }
 .reg-aside .ev-title { font-size: 20px; line-height: 28px; }
+
+/* ---------- 17. Tambahan setelah evaluasi usability ---------- */
+[hidden] { display: none !important; }
+
+/* T7: blok tanggal yang menunjukkan batas pendaftaran, bukan tanggal acara */
+.date.date-batas { background: var(--white); color: var(--navy); box-shadow: inset 0 0 0 2px var(--navy); }
+.date.date-batas small { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 3px; }
+.date.date-batas b { font-size: 19px; }
+.date.date-batas span { margin-top: 3px; }
+.ev.closed .date.date-batas { background: var(--white); color: var(--text-2); box-shadow: inset 0 0 0 2px var(--border); }
+.hero .date.date-batas b { font-size: 26px; }
+
+/* T9: judul hasil + tombol hapus filter */
+.jdl { display: none; }
+.jdl-semua { display: inline; }
+.hasil { grid-template-columns: 1fr auto auto; column-gap: 16px; }
+.hasil > .count { grid-column: 3; }
+.hapus-filter {
+  display: none; grid-column: 2; grid-row: 1; padding: 6px 0; border: 0; background: none;
+  color: var(--link); font-weight: 600; font-size: 15px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer;
+}
+.jelajah:has(#j-semua:not(:checked)) .hapus-filter,
+.jelajah:has(#o-semua:not(:checked)) .hapus-filter,
+.jelajah:has(#f-cert:checked) .hapus-filter,
+.jelajah:has(#cari:not(:placeholder-shown)) .hapus-filter { display: inline; }
+.hasil.kosong-js .kosong { display: block; }
+
+/* T1: tiket yang tersimpan (ditandai app.js) */
+.tk-new.is-terdaftar { display: block; }
+@media (min-width: 1100px) { .nv.nv-new.is-terdaftar { display: flex; } }
+
+/* Status "Mengirim…" pada tombol Ya, kirim */
+.btn.is-sending { pointer-events: none; opacity: .85; }
+.btn.is-sending::before {
+  content: ""; width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, .45); border-top-color: var(--white); animation: putar .8s linear infinite;
+}
+@keyframes putar { to { transform: rotate(360deg); } }
+
+/* Poster event (opsional, hanya di halaman detail) */
+.poster { margin-top: 16px; }
+.poster img { display: block; width: 100%; max-width: 420px; height: auto; border-radius: var(--radius); border: 1px solid var(--line); }
+@media (min-width: 768px) { .poster { margin-top: 24px; } }

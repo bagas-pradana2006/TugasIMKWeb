@@ -8,9 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;700&display=swap">
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/daftar.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="../js/app.js" defer></script>
 </head>
-<body class="">
+<body class="" data-event="bcc-x-merkle">
 <a class="sr-only" href="#isi">Lewati ke konten</a>
 <header class="site-head">
   <div class="wrap">
@@ -37,7 +39,7 @@
   <div class="reg-grid">
     <form class="reg-form" action="../riwayat.html" novalidate>
       <h1 class="h1">Daftar event</h1>
-      <p class="lead">Data diri sudah terisi dari akun SSO UB. Periksa satu per satu dan ubah kalau ada yang salah.</p>
+      <p class="lead">Data diri sudah terisi dari akun SSO UB. Periksa satu per satu dan ubah kalau ada yang salah. Tanda <span class="req">*</span> wajib diisi.</p>
       <fieldset class="box">
         <legend>Data diri</legend>
         <div class="field">
@@ -70,7 +72,7 @@
           <input class="input mono" id="f-wa" name="wa" type="tel" inputmode="numeric" autocomplete="tel" placeholder="08xxxxxxxxxx"
                  pattern="08[0-9]{8,11}" maxlength="13" required aria-describedby="h-wa e-wa">
           <p class="helper" id="h-wa">Contoh: 081234567890. Dipakai panitia untuk info mendadak.</p>
-          <p class="err" id="e-wa" role="alert">Nomornya kurang. Isi 10–13 digit, diawali 08.</p>
+          <p class="err" id="e-wa" role="alert">Nomor belum benar. Isi 10–13 digit angka, diawali 08.</p>
         </div>
       </fieldset>
       <fieldset class="box"><legend>Data tambahan untuk seminar</legend><div><div class="field"><label class="label" for="f-tanya">Pertanyaan untuk pemateri (opsional)</label><textarea class="input" id="f-tanya" name="tanya"></textarea></div></div></fieldset>
@@ -83,8 +85,9 @@
       <label class="check-row confirm-box"><input type="checkbox" id="konfirm" required> <span>Data diri di atas sudah benar<small>Wajib dicentang sebelum mengirim.</small></span></label>
       <div class="kirim-bar">
         <p class="hint hint-a">Centang konfirmasi data dulu</p>
-        <p class="hint hint-b">Masih ada isian wajib yang kosong atau salah</p>
+        <div class="hint hint-b"><p>Lengkapi dulu:</p><ul><li class="miss miss-nama">Nama lengkap</li><li class="miss miss-nim">NIM (15 digit)</li><li class="miss miss-email">Email kampus</li><li class="miss miss-prodi">Program studi</li><li class="miss miss-angkatan">Angkatan</li><li class="miss miss-wa">Nomor WhatsApp (10–13 digit, diawali 08)</li></ul></div>
         <button class="btn btn-primary btn-block btn-kirim" type="button" popovertarget="konfirmasi">Kirim pendaftaran</button>
+        <span class="btn btn-primary btn-block btn-off" aria-disabled="true">Kirim pendaftaran</span>
       </div>
     </form>
     <aside class="reg-aside d-only" aria-label="Event yang didaftar">
@@ -104,8 +107,8 @@
   </div>
   <p>Pendaftaran tidak bisa dibatalkan setelah dikirim. Tiketmu muncul di menu Riwayat dan ditunjukkan ke panitia saat registrasi ulang.</p>
   <div class="dlg-actions">
-    <button class="btn btn-secondary" type="button" popovertarget="konfirmasi" popovertargetaction="hide">Periksa lagi</button>
-    <a class="btn btn-primary" href="../riwayat.html#ok-bcc-x-merkle">Ya, kirim</a>
+    <button class="btn btn-secondary" type="button" popovertarget="konfirmasi" popovertargetaction="hide" autofocus>Periksa lagi</button>
+    <a class="btn btn-primary" href="../riwayat.html#ok-bcc-x-merkle" data-daftar="bcc-x-merkle">Ya, kirim</a>
   </div>
 </div>
 <footer class="site-foot d-only"><div class="wrap">Kompas Filkom dikelola Fakultas Ilmu Komputer, Universitas Brawijaya.</div></footer>

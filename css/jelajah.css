@@ -20,6 +20,19 @@
 .jelajah:has(#o-software-engineering-lab:checked) .ev:not(.o-software-engineering-lab) { display: none; }
 .jelajah:has(#o-upstream-youth-champs-2026:checked) .ev:not(.o-upstream-youth-champs-2026) { display: none; }
 .jelajah:has(#f-cert:checked) .ev:not(.has-cert) { display: none; }
+/* Judul hasil mengikuti chip jenis yang aktif dan kolom cari */
+.jelajah:has(#cari:not(:placeholder-shown)) .jdl-semua { display: none; }
+.jelajah:has(#cari:not(:placeholder-shown)) .jdl-cari { display: inline; }
+.jelajah:has(#j-kuliah-tamu:checked) .jdl-semua, .jelajah:has(#j-kuliah-tamu:checked) .jdl-cari { display: none; }
+.jelajah:has(#j-kuliah-tamu:checked) .jdl-kuliah-tamu { display: inline; }
+.jelajah:has(#j-seminar:checked) .jdl-semua, .jelajah:has(#j-seminar:checked) .jdl-cari { display: none; }
+.jelajah:has(#j-seminar:checked) .jdl-seminar { display: inline; }
+.jelajah:has(#j-workshop:checked) .jdl-semua, .jelajah:has(#j-workshop:checked) .jdl-cari { display: none; }
+.jelajah:has(#j-workshop:checked) .jdl-workshop { display: inline; }
+.jelajah:has(#j-lomba:checked) .jdl-semua, .jelajah:has(#j-lomba:checked) .jdl-cari { display: none; }
+.jelajah:has(#j-lomba:checked) .jdl-lomba { display: inline; }
+.jelajah:has(#j-volunteer:checked) .jdl-semua, .jelajah:has(#j-volunteer:checked) .jdl-cari { display: none; }
+.jelajah:has(#j-volunteer:checked) .jdl-volunteer { display: inline; }
 /* Kombinasi filter yang tidak punya hasil: tampilkan pesan kosong */
 .jelajah:has(#j-semua:checked):has(#o-filkom-ub:checked):has(#f-cert:checked) .kosong,
 .jelajah:has(#j-semua:checked):has(#o-filkom-ub-fk-ub:checked):has(#f-cert:checked) .kosong,
