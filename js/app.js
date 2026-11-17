@@ -66,7 +66,7 @@ const cari = document.getElementById("cari");
 if (cari) {
   const hasil = document.querySelector(".hasil");
   const semuaEvent = [...hasil.querySelectorAll(".ev")];
-  const rapikan = (teks) => teks.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const rapikan = (teks) => teks.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
 
   const saring = () => {
     const kata = rapikan(cari.value.trim()).split(/\s+/).filter(Boolean);
