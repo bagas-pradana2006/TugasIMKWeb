@@ -66,7 +66,7 @@ const cari = document.getElementById("cari");
 if (cari) {
   const hasil = document.querySelector(".hasil");
   const semuaEvent = [...hasil.querySelectorAll(".ev")];
-  const rapikan = (teks) => teks.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const rapikan = (teks) => teks.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
   const saring = () => {
     const kata = rapikan(cari.value.trim()).split(/\s+/).filter(Boolean);
@@ -75,14 +75,18 @@ if (cari) {
     hasil.classList.toggle("kosong-js", !adaYangTampil);
   };
 
+  const formSaring = document.getElementById("saring");
   cari.addEventListener("input", saring);
-  cari.form.addEventListener("change", saring);
-  cari.form.addEventListener("reset", () => setTimeout(saring));
-  // Enter: tidak memuat ulang halaman, tutup keyboard HP, lalu gulir ke hasil
-  cari.form.addEventListener("submit", (ev) => {
+  formSaring.addEventListener("change", saring);
+  formSaring.addEventListener("reset", () => setTimeout(saring));
+  formSaring.addEventListener("submit", (ev) => ev.preventDefault()); // jangan muat ulang halaman
+
+  // Enter (keyboard laptop maupun tombol "Cari" di keyboard HP)
+  cari.addEventListener("keydown", (ev) => {
+    if (ev.key !== "Enter" || ev.isComposing) return;
     ev.preventDefault();
     saring();
-    cari.blur();
+    cari.blur(); // HP: keyboard tertutup
     document.getElementById("t-hasil").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 }
