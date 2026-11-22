@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+<!-- Pengaturan dasar: huruf, ukuran layar HP, judul tab browser -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#14213D">
 <title>Daftar Dekan Cup &amp; Dies Natalis ke-15 · Kompas Filkom</title>
+<!-- Font Bricolage Grotesque + JetBrains Mono dari Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;700&display=swap">
+<!-- Tampilan: style.css untuk semua halaman, file CSS lain khusus halaman ini -->
 <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/daftar.css">
+<!-- Tanda bahwa JavaScript aktif (dipakai CSS riwayat), lalu JS kecil app.js -->
 <script>document.documentElement.classList.add("js")</script>
 <script src="../js/app.js" defer></script>
 </head>
 <body class="" data-event="dekan-cup-dies-natalis-15">
+<!-- Tautan tersembunyi untuk pengguna keyboard/pembaca layar: langsung ke isi halaman -->
 <a class="sr-only" href="#isi">Lewati ke konten</a>
+<!-- ===== HEADER ATAS: logo, menu (tablet/desktop), lonceng notifikasi ===== -->
 <header class="site-head">
   <div class="wrap">
     <a class="logo" href="../index.html" aria-label="Kompas Filkom, ke Beranda"><span class="logo-word" aria-hidden="true">k<svg class="logo-o" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="#14213D" stroke-width="3.4"/><path d="M8.6 15.4 15.6 8.4" stroke="#F0600C" stroke-width="2.6" stroke-linecap="round"/></svg>mpas</span><span class="logo-sub" aria-hidden="true"><b>Fil</b>kom</span></a>
@@ -23,6 +29,7 @@
     </div>
   </div>
 </header>
+<!-- Kotak notifikasi: muncul saat lonceng diklik (atribut popover) -->
 <div id="notif" class="notif" popover>
   <h2>Notifikasi</h2>
   <ul>
@@ -30,16 +37,20 @@
     <li><a href="../riwayat.html#tiket-scope-2026">SCOPE 2026</a> hari Sabtu pukul 10.30. Tiketmu ada di Riwayat.<small>Kam, 22 Okt</small></li>
   </ul>
 </div>
+<!-- Header khusus HP: tombol kembali + ringkasan event -->
 <header class="m-head reg-head wrap">
   <a class="icon-btn" href="../event/dekan-cup-dies-natalis-15.html" aria-label="Kembali ke detail event"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
   <div class="mini"><span class="date" aria-hidden="true"><b>06</b><span>Nov</span></span><p>Dekan Cup &amp; Dies Natalis ke-15 FILKOM UB</p></div>
 </header>
+<!-- ===== ISI HALAMAN DAFTAR ===== -->
 <main id="isi" class="wrap page reg">
   <a class="back-link d-only" href="../event/dekan-cup-dies-natalis-15.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Kembali ke detail event</a>
   <div class="reg-grid">
+    <!-- Form pendaftaran (validasi memakai required/pattern HTML + CSS) -->
     <form class="reg-form" action="../riwayat.html" novalidate>
       <h1 class="h1">Daftar event</h1>
       <p class="lead">Data diri sudah terisi dari akun SSO UB. Periksa satu per satu dan ubah kalau ada yang salah. Tanda <span class="req">*</span> wajib diisi.</p>
+      <!-- Kotak 1: data diri, terisi otomatis dari SSO UB -->
       <fieldset class="box">
         <legend>Data diri</legend>
         <div class="field">
@@ -75,7 +86,9 @@
           <p class="err" id="e-wa" role="alert">Nomor belum benar. Isi 10–13 digit angka, diawali 08.</p>
         </div>
       </fieldset>
+      <!-- Kotak 2: data tambahan sesuai jenis event (kalau ada) -->
       <fieldset class="box"><legend>Data tambahan untuk lomba</legend><div><div class="field"><label class="label" for="f-cabang">Cabang lomba <span class="req" aria-hidden="true">*</span></label><select class="input" id="f-cabang" name="cabang" required><option value="">Pilih cabang</option><option>Tenis meja</option><option>Badminton</option><option>Catur</option><option>Band</option><option>Solo nyanyi</option><option>Basket (eksibisi)</option><option>Futsal (eksibisi)</option><option>Gocapan (gowes cari sarapan)</option><option>Lomba video</option><option>Tekken</option><option>eFootball</option><option>Mobile Legends: Bang Bang</option><option>Fotografi</option></select></div><div class="field"><label class="label" for="f-tim">Nama tim (untuk cabang beregu)</label><input class="input" id="f-tim" name="tim" type="text"><p class=helper>Kosongkan kalau ikut cabang perorangan.</p></div></div></fieldset>
+      <!-- Pilihan sumber info, pengingat, dan konfirmasi data -->
       <fieldset class="plain">
         <legend class="label">Tahu event ini dari mana?</legend>
         <div class="chips"><label class="chip"><input type="radio" name="sumber" value="Kompas Filkom" checked> Kompas Filkom</label><label class="chip"><input type="radio" name="sumber" value="Instagram"> Instagram</label><label class="chip"><input type="radio" name="sumber" value="Grup WA"> Grup WA</label><label class="chip"><input type="radio" name="sumber" value="Teman"> Teman</label></div>
@@ -83,6 +96,8 @@
       </fieldset>
       <label class="check-row reminder"><input type="checkbox" name="pengingat" checked> <span>Ingatkan aku H-1 dan satu jam sebelum acara</span></label>
       <label class="check-row confirm-box"><input type="checkbox" id="konfirm" required> <span>Data diri di atas sudah benar<small>Wajib dicentang sebelum mengirim.</small></span></label>
+      <!-- Petunjuk + tombol kirim. Tombol asli tampil hanya kalau form sudah benar;
+           sebelumnya yang tampil tombol tiruan pudar (.btn-off) -->
       <div class="kirim-bar">
         <p class="hint hint-a">Centang konfirmasi data dulu</p>
         <div class="hint hint-b"><p>Lengkapi dulu:</p><ul><li class="miss miss-nama">Nama lengkap</li><li class="miss miss-nim">NIM (15 digit)</li><li class="miss miss-email">Email kampus</li><li class="miss miss-prodi">Program studi</li><li class="miss miss-angkatan">Angkatan</li><li class="miss miss-wa">Nomor WhatsApp (10–13 digit, diawali 08)</li><li class="miss miss-cabang">Cabang lomba</li></ul></div>
@@ -90,6 +105,7 @@
         <span class="btn btn-primary btn-block btn-off" aria-disabled="true">Kirim pendaftaran</span>
       </div>
     </form>
+    <!-- Ringkasan event yang didaftar (tablet/desktop) -->
     <aside class="reg-aside d-only" aria-label="Event yang didaftar">
       <p class="meta">Kamu mendaftar untuk</p>
       <div class="ev"><span class="date" aria-hidden="true"><b>06</b><span>Nov</span></span><div class="ev-body"><span class="jenis">Lomba · FILKOM UB</span><span class="ev-title">Dekan Cup &amp; Dies Natalis ke-15 FILKOM UB</span></div></div>
@@ -99,6 +115,7 @@
     </aside>
   </div>
 </main>
+<!-- ===== DIALOG KONFIRMASI: muncul saat "Kirim pendaftaran" ditekan (atribut popover) ===== -->
 <div id="konfirmasi" class="dialog" popover role="dialog" aria-modal="true" aria-labelledby="dlg-judul">
   <div class="dlg-head">
     <svg class="ico ico-warn" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.01"/></svg>
@@ -111,7 +128,9 @@
     <a class="btn btn-primary" href="../riwayat.html#ok-dekan-cup-dies-natalis-15" data-daftar="dekan-cup-dies-natalis-15">Ya, kirim</a>
   </div>
 </div>
+<!-- ===== FOOTER (tablet/desktop) ===== -->
 <footer class="site-foot d-only"><div class="wrap">Kompas Filkom dikelola Fakultas Ilmu Komputer, Universitas Brawijaya.</div></footer>
+<!-- ===== MENU BAWAH (khusus HP) ===== -->
 <div class="dock"><nav class="bottom-nav" aria-label="Menu utama"><a href="../index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/></svg><span>Beranda</span></a><a href="../jelajah.html" aria-current="page"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><span>Jelajah</span></a><a href="../riwayat.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Riwayat</span></a></nav></div>
 </body>
 </html>

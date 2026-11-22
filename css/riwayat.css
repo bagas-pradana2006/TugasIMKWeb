@@ -2,6 +2,8 @@
    Tiap tiket punya radio tersembunyi; label di daftar/kepala tiket memilih radio itu.
    Tiket tersimpan ditampilkan app.js (kelas .is-terdaftar). Aturan html:not(.js)
    adalah cadangan kalau JavaScript mati: tiket baru muncul lewat :target (#ok-slug). */
+
+/* Tiket: SCOPE 2026: Scholarship Preparation — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 .rw:has(#r-scope-2026:checked) #tiket-scope-2026 .pn,
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-scope-2026:target) #tiket-scope-2026 .pn,
 html:not(.js) body:not(:has(.ok-msg:target, .tk:target)) .rw:not(:has(.rr:checked)) #tiket-scope-2026 .pn { display: block; }
@@ -21,6 +23,8 @@ html:not(.js) body:not(:has(.ok-msg:target, .tk:target)) .rw:not(:has(.rr:checke
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-scope-2026:target) .nv-scope-2026 .jenis,
 html:not(.js) body:not(:has(.ok-msg:target, .tk:target)) .rw:not(:has(.rr:checked)) .nv-scope-2026 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-scope-2026:focus-visible) .nv-scope-2026, .rw:has(#r-scope-2026:focus-visible) #tiket-scope-2026 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: BCM Vol. 2: Open Tenant Brawijaya Crafting Mastery — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-bcm-vol-2:target) #tiket-bcm-vol-2 { display: block; }
 @media (min-width: 1100px) { body:has(#ok-bcm-vol-2:target) .nv-bcm-vol-2 { display: flex; } }
 .rw:has(#r-bcm-vol-2:checked) #tiket-bcm-vol-2 .pn,
@@ -42,6 +46,8 @@ html:not(.js) body:has(#ok-bcm-vol-2:target) .rw:not(:has(.rr:checked)) .nv-bcm-
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-bcm-vol-2:target) .nv-bcm-vol-2 .jenis,
 html:not(.js) body:has(#ok-bcm-vol-2:target) .rw:not(:has(.rr:checked)) .nv-bcm-vol-2 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-bcm-vol-2:focus-visible) .nv-bcm-vol-2, .rw:has(#r-bcm-vol-2:focus-visible) #tiket-bcm-vol-2 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: GEN-ZONE 2026: Canvas for Equality — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-gen-zone-2026:target) #tiket-gen-zone-2026 { display: block; }
 @media (min-width: 1100px) { body:has(#ok-gen-zone-2026:target) .nv-gen-zone-2026 { display: flex; } }
 .rw:has(#r-gen-zone-2026:checked) #tiket-gen-zone-2026 .pn,
@@ -63,6 +69,8 @@ html:not(.js) body:has(#ok-gen-zone-2026:target) .rw:not(:has(.rr:checked)) .nv-
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-gen-zone-2026:target) .nv-gen-zone-2026 .jenis,
 html:not(.js) body:has(#ok-gen-zone-2026:target) .rw:not(:has(.rr:checked)) .nv-gen-zone-2026 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-gen-zone-2026:focus-visible) .nv-gen-zone-2026, .rw:has(#r-gen-zone-2026:focus-visible) #tiket-gen-zone-2026 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: Magang GO! 2026: Workshop Persiapan Magang — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-magang-go-2026:target) #tiket-magang-go-2026 { display: block; }
 @media (min-width: 1100px) { body:has(#ok-magang-go-2026:target) .nv-magang-go-2026 { display: flex; } }
 .rw:has(#r-magang-go-2026:checked) #tiket-magang-go-2026 .pn,
@@ -84,6 +92,8 @@ html:not(.js) body:has(#ok-magang-go-2026:target) .rw:not(:has(.rr:checked)) .nv
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-magang-go-2026:target) .nv-magang-go-2026 .jenis,
 html:not(.js) body:has(#ok-magang-go-2026:target) .rw:not(:has(.rr:checked)) .nv-magang-go-2026 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-magang-go-2026:focus-visible) .nv-magang-go-2026, .rw:has(#r-magang-go-2026:focus-visible) #tiket-magang-go-2026 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: KARADOKS: Film Screening & Talkshow — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-karadoks-2026:target) #tiket-karadoks-2026 { display: block; }
 @media (min-width: 1100px) { body:has(#ok-karadoks-2026:target) .nv-karadoks-2026 { display: flex; } }
 .rw:has(#r-karadoks-2026:checked) #tiket-karadoks-2026 .pn,
@@ -105,6 +115,8 @@ html:not(.js) body:has(#ok-karadoks-2026:target) .rw:not(:has(.rr:checked)) .nv-
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-karadoks-2026:target) .nv-karadoks-2026 .jenis,
 html:not(.js) body:has(#ok-karadoks-2026:target) .rw:not(:has(.rr:checked)) .nv-karadoks-2026 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-karadoks-2026:focus-visible) .nv-karadoks-2026, .rw:has(#r-karadoks-2026:focus-visible) #tiket-karadoks-2026 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: Artropolis 2026: Workshop Mini Terrarium — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-artropolis-mini-terrarium:target) #tiket-artropolis-mini-terrarium { display: block; }
 @media (min-width: 1100px) { body:has(#ok-artropolis-mini-terrarium:target) .nv-artropolis-mini-terrarium { display: flex; } }
 .rw:has(#r-artropolis-mini-terrarium:checked) #tiket-artropolis-mini-terrarium .pn,
@@ -126,6 +138,8 @@ html:not(.js) body:has(#ok-artropolis-mini-terrarium:target) .rw:not(:has(.rr:ch
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-artropolis-mini-terrarium:target) .nv-artropolis-mini-terrarium .jenis,
 html:not(.js) body:has(#ok-artropolis-mini-terrarium:target) .rw:not(:has(.rr:checked)) .nv-artropolis-mini-terrarium .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-artropolis-mini-terrarium:focus-visible) .nv-artropolis-mini-terrarium, .rw:has(#r-artropolis-mini-terrarium:focus-visible) #tiket-artropolis-mini-terrarium .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: Artropolis 2026: Workshop Moru Doll — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-artropolis-moru-doll:target) #tiket-artropolis-moru-doll { display: block; }
 @media (min-width: 1100px) { body:has(#ok-artropolis-moru-doll:target) .nv-artropolis-moru-doll { display: flex; } }
 .rw:has(#r-artropolis-moru-doll:checked) #tiket-artropolis-moru-doll .pn,
@@ -147,6 +161,8 @@ html:not(.js) body:has(#ok-artropolis-moru-doll:target) .rw:not(:has(.rr:checked
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-artropolis-moru-doll:target) .nv-artropolis-moru-doll .jenis,
 html:not(.js) body:has(#ok-artropolis-moru-doll:target) .rw:not(:has(.rr:checked)) .nv-artropolis-moru-doll .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-artropolis-moru-doll:focus-visible) .nv-artropolis-moru-doll, .rw:has(#r-artropolis-moru-doll:focus-visible) #tiket-artropolis-moru-doll .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: Artropolis 2026: Workshop Italian Charm Bracelet — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-artropolis-charm-bracelet:target) #tiket-artropolis-charm-bracelet { display: block; }
 @media (min-width: 1100px) { body:has(#ok-artropolis-charm-bracelet:target) .nv-artropolis-charm-bracelet { display: flex; } }
 .rw:has(#r-artropolis-charm-bracelet:checked) #tiket-artropolis-charm-bracelet .pn,
@@ -168,6 +184,8 @@ html:not(.js) body:has(#ok-artropolis-charm-bracelet:target) .rw:not(:has(.rr:ch
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-artropolis-charm-bracelet:target) .nv-artropolis-charm-bracelet .jenis,
 html:not(.js) body:has(#ok-artropolis-charm-bracelet:target) .rw:not(:has(.rr:checked)) .nv-artropolis-charm-bracelet .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-artropolis-charm-bracelet:focus-visible) .nv-artropolis-charm-bracelet, .rw:has(#r-artropolis-charm-bracelet:focus-visible) #tiket-artropolis-charm-bracelet .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: BCC x Merkle: Decoding the PM Brief — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-bcc-x-merkle:target) #tiket-bcc-x-merkle { display: block; }
 @media (min-width: 1100px) { body:has(#ok-bcc-x-merkle:target) .nv-bcc-x-merkle { display: flex; } }
 .rw:has(#r-bcc-x-merkle:checked) #tiket-bcc-x-merkle .pn,
@@ -189,6 +207,8 @@ html:not(.js) body:has(#ok-bcc-x-merkle:target) .rw:not(:has(.rr:checked)) .nv-b
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-bcc-x-merkle:target) .nv-bcc-x-merkle .jenis,
 html:not(.js) body:has(#ok-bcc-x-merkle:target) .rw:not(:has(.rr:checked)) .nv-bcc-x-merkle .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-bcc-x-merkle:focus-visible) .nv-bcc-x-merkle, .rw:has(#r-bcc-x-merkle:focus-visible) #tiket-bcc-x-merkle .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: Talkshow Karier bersama Vina Muliana — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-upstream-youth-champs-2026:target) #tiket-upstream-youth-champs-2026 { display: block; }
 @media (min-width: 1100px) { body:has(#ok-upstream-youth-champs-2026:target) .nv-upstream-youth-champs-2026 { display: flex; } }
 .rw:has(#r-upstream-youth-champs-2026:checked) #tiket-upstream-youth-champs-2026 .pn,
@@ -210,6 +230,8 @@ html:not(.js) body:has(#ok-upstream-youth-champs-2026:target) .rw:not(:has(.rr:c
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-upstream-youth-champs-2026:target) .nv-upstream-youth-champs-2026 .jenis,
 html:not(.js) body:has(#ok-upstream-youth-champs-2026:target) .rw:not(:has(.rr:checked)) .nv-upstream-youth-champs-2026 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-upstream-youth-champs-2026:focus-visible) .nv-upstream-youth-champs-2026, .rw:has(#r-upstream-youth-champs-2026:focus-visible) #tiket-upstream-youth-champs-2026 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: Webinar Diaspora Berdampak: Skrining TB di Era AI — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-webinar-diaspora-berdampak-2026:target) #tiket-webinar-diaspora-berdampak-2026 { display: block; }
 @media (min-width: 1100px) { body:has(#ok-webinar-diaspora-berdampak-2026:target) .nv-webinar-diaspora-berdampak-2026 { display: flex; } }
 .rw:has(#r-webinar-diaspora-berdampak-2026:checked) #tiket-webinar-diaspora-berdampak-2026 .pn,
@@ -231,6 +253,8 @@ html:not(.js) body:has(#ok-webinar-diaspora-berdampak-2026:target) .rw:not(:has(
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-webinar-diaspora-berdampak-2026:target) .nv-webinar-diaspora-berdampak-2026 .jenis,
 html:not(.js) body:has(#ok-webinar-diaspora-berdampak-2026:target) .rw:not(:has(.rr:checked)) .nv-webinar-diaspora-berdampak-2026 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-webinar-diaspora-berdampak-2026:focus-visible) .nv-webinar-diaspora-berdampak-2026, .rw:has(#r-webinar-diaspora-berdampak-2026:focus-visible) #tiket-webinar-diaspora-berdampak-2026 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: STACK 2026: Student Hackathon GDGoC ITB — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-stack-2026:target) #tiket-stack-2026 { display: block; }
 @media (min-width: 1100px) { body:has(#ok-stack-2026:target) .nv-stack-2026 { display: flex; } }
 .rw:has(#r-stack-2026:checked) #tiket-stack-2026 .pn,
@@ -252,6 +276,8 @@ html:not(.js) body:has(#ok-stack-2026:target) .rw:not(:has(.rr:checked)) .nv-sta
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-stack-2026:target) .nv-stack-2026 .jenis,
 html:not(.js) body:has(#ok-stack-2026:target) .rw:not(:has(.rr:checked)) .nv-stack-2026 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-stack-2026:focus-visible) .nv-stack-2026, .rw:has(#r-stack-2026:focus-visible) #tiket-stack-2026 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: Sharing Session RPL #5: Making Scrum Work — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-sharing-session-rpl-5:target) #tiket-sharing-session-rpl-5 { display: block; }
 @media (min-width: 1100px) { body:has(#ok-sharing-session-rpl-5:target) .nv-sharing-session-rpl-5 { display: flex; } }
 .rw:has(#r-sharing-session-rpl-5:checked) #tiket-sharing-session-rpl-5 .pn,
@@ -273,6 +299,8 @@ html:not(.js) body:has(#ok-sharing-session-rpl-5:target) .rw:not(:has(.rr:checke
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-sharing-session-rpl-5:target) .nv-sharing-session-rpl-5 .jenis,
 html:not(.js) body:has(#ok-sharing-session-rpl-5:target) .rw:not(:has(.rr:checked)) .nv-sharing-session-rpl-5 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-sharing-session-rpl-5:focus-visible) .nv-sharing-session-rpl-5, .rw:has(#r-sharing-session-rpl-5:focus-visible) #tiket-sharing-session-rpl-5 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: Dekan Cup & Dies Natalis ke-15 FILKOM UB — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-dekan-cup-dies-natalis-15:target) #tiket-dekan-cup-dies-natalis-15 { display: block; }
 @media (min-width: 1100px) { body:has(#ok-dekan-cup-dies-natalis-15:target) .nv-dekan-cup-dies-natalis-15 { display: flex; } }
 .rw:has(#r-dekan-cup-dies-natalis-15:checked) #tiket-dekan-cup-dies-natalis-15 .pn,
@@ -294,6 +322,8 @@ html:not(.js) body:has(#ok-dekan-cup-dies-natalis-15:target) .rw:not(:has(.rr:ch
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-dekan-cup-dies-natalis-15:target) .nv-dekan-cup-dies-natalis-15 .jenis,
 html:not(.js) body:has(#ok-dekan-cup-dies-natalis-15:target) .rw:not(:has(.rr:checked)) .nv-dekan-cup-dies-natalis-15 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-dekan-cup-dies-natalis-15:focus-visible) .nv-dekan-cup-dies-natalis-15, .rw:has(#r-dekan-cup-dies-natalis-15:focus-visible) #tiket-dekan-cup-dies-natalis-15 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Tiket: Data Analytics & AI Full Training — dibuka kalau radionya dipilih (atau dituju lewat alamat #ok-/#tiket-) */
 body:has(#ok-data-analytics-ai-training:target) #tiket-data-analytics-ai-training { display: block; }
 @media (min-width: 1100px) { body:has(#ok-data-analytics-ai-training:target) .nv-data-analytics-ai-training { display: flex; } }
 .rw:has(#r-data-analytics-ai-training:checked) #tiket-data-analytics-ai-training .pn,
@@ -315,6 +345,8 @@ html:not(.js) body:has(#ok-data-analytics-ai-training:target) .rw:not(:has(.rr:c
 html:not(.js) .rw:not(:has(.rr:checked)):has(#tiket-data-analytics-ai-training:target) .nv-data-analytics-ai-training .jenis,
 html:not(.js) body:has(#ok-data-analytics-ai-training:target) .rw:not(:has(.rr:checked)) .nv-data-analytics-ai-training .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#r-data-analytics-ai-training:focus-visible) .nv-data-analytics-ai-training, .rw:has(#r-data-analytics-ai-training:focus-visible) #tiket-data-analytics-ai-training .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Sertifikat: Demo Day: Pameran dan Pitching Produk MVP Launchpad FILKOM 2026 */
 .rw:has(#s-demo-day-launchpad-2026:checked) #sert-demo-day-launchpad-2026 .pn { display: block; }
 .rw:has(#s-demo-day-launchpad-2026:checked) #sert-demo-day-launchpad-2026 .tk-head { border-radius: 16px 16px 0 0; }
 .rw:has(#s-demo-day-launchpad-2026:checked) #sert-demo-day-launchpad-2026 .chev { transform: rotate(180deg); }
@@ -322,6 +354,8 @@ html:not(.js) body:has(#ok-data-analytics-ai-training:target) .rw:not(:has(.rr:c
 .rw:has(#s-demo-day-launchpad-2026:checked) .nv-demo-day-launchpad-2026 .date { background: var(--white); color: var(--navy); }
 .rw:has(#s-demo-day-launchpad-2026:checked) .nv-demo-day-launchpad-2026 .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#s-demo-day-launchpad-2026:focus-visible) .nv-demo-day-launchpad-2026, .rw:has(#s-demo-day-launchpad-2026:focus-visible) #sert-demo-day-launchpad-2026 .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Sertifikat: Kuliah Tamu: How Modern Technologies Are Combined to Solve Real Problems */
 .rw:has(#s-kuliah-tamu-modern-technologies:checked) #sert-kuliah-tamu-modern-technologies .pn { display: block; }
 .rw:has(#s-kuliah-tamu-modern-technologies:checked) #sert-kuliah-tamu-modern-technologies .tk-head { border-radius: 16px 16px 0 0; }
 .rw:has(#s-kuliah-tamu-modern-technologies:checked) #sert-kuliah-tamu-modern-technologies .chev { transform: rotate(180deg); }
@@ -329,6 +363,8 @@ html:not(.js) body:has(#ok-data-analytics-ai-training:target) .rw:not(:has(.rr:c
 .rw:has(#s-kuliah-tamu-modern-technologies:checked) .nv-kuliah-tamu-modern-technologies .date { background: var(--white); color: var(--navy); }
 .rw:has(#s-kuliah-tamu-modern-technologies:checked) .nv-kuliah-tamu-modern-technologies .jenis { color: #C9D3E3; font-weight: 500; }
 .rw:has(#s-kuliah-tamu-modern-technologies:focus-visible) .nv-kuliah-tamu-modern-technologies, .rw:has(#s-kuliah-tamu-modern-technologies:focus-visible) #sert-kuliah-tamu-modern-technologies .tk-head { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* Sertifikat: Kuliah Tamu Kewirausahaan: Validasi Product Market Fit: Adalah Kunci */
 .rw:has(#s-kuliah-tamu-kewirausahaan-pmf:checked) #sert-kuliah-tamu-kewirausahaan-pmf .pn { display: block; }
 .rw:has(#s-kuliah-tamu-kewirausahaan-pmf:checked) #sert-kuliah-tamu-kewirausahaan-pmf .tk-head { border-radius: 16px 16px 0 0; }
 .rw:has(#s-kuliah-tamu-kewirausahaan-pmf:checked) #sert-kuliah-tamu-kewirausahaan-pmf .chev { transform: rotate(180deg); }

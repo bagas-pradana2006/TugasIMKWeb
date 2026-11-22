@@ -1,11 +1,13 @@
 /* jelajah.css: aturan saring event, dibuat dari data event.
    Chip jenis, penyelenggara, dan sakelar sertifikat adalah radio/checkbox;
    :has() menyembunyikan baris yang tidak cocok. */
+/* Chip jenis event: kalau chip X dipilih, sembunyikan event yang jenisnya bukan X */
 .jelajah:has(#j-kuliah-tamu:checked) .ev:not(.j-kuliah-tamu) { display: none; }
 .jelajah:has(#j-seminar:checked) .ev:not(.j-seminar) { display: none; }
 .jelajah:has(#j-workshop:checked) .ev:not(.j-workshop) { display: none; }
 .jelajah:has(#j-lomba:checked) .ev:not(.j-lomba) { display: none; }
 .jelajah:has(#j-volunteer:checked) .ev:not(.j-volunteer) { display: none; }
+/* Chip penyelenggara: sembunyikan event dari penyelenggara lain */
 .jelajah:has(#o-bcc-filkom:checked) .ev:not(.o-bcc-filkom) { display: none; }
 .jelajah:has(#o-eruditio-data-talks:checked) .ev:not(.o-eruditio-data-talks) { display: none; }
 .jelajah:has(#o-filkom-ub:checked) .ev:not(.o-filkom-ub) { display: none; }
@@ -19,6 +21,7 @@
 .jelajah:has(#o-raion-community:checked) .ev:not(.o-raion-community) { display: none; }
 .jelajah:has(#o-software-engineering-lab:checked) .ev:not(.o-software-engineering-lab) { display: none; }
 .jelajah:has(#o-upstream-youth-champs-2026:checked) .ev:not(.o-upstream-youth-champs-2026) { display: none; }
+/* Sakelar "Hanya yang bersertifikat": sembunyikan event tanpa sertifikat */
 .jelajah:has(#f-cert:checked) .ev:not(.has-cert) { display: none; }
 /* Judul hasil mengikuti chip jenis yang aktif dan kolom cari */
 .jelajah:has(#cari:not(:placeholder-shown)) .jdl-semua { display: none; }

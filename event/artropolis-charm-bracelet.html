@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+<!-- Pengaturan dasar: huruf, ukuran layar HP, judul tab browser -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#14213D">
 <title>Artropolis 2026: Workshop Italian Charm Bracelet · Kompas Filkom</title>
+<!-- Font Bricolage Grotesque + JetBrains Mono dari Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;700&display=swap">
+<!-- Tampilan: style.css untuk semua halaman, file CSS lain khusus halaman ini -->
 <link rel="stylesheet" href="../css/style.css">
+<!-- Tanda bahwa JavaScript aktif (dipakai CSS riwayat), lalu JS kecil app.js -->
 <script>document.documentElement.classList.add("js")</script>
 <script src="../js/app.js" defer></script>
 </head>
 <body class="" data-event="artropolis-charm-bracelet">
+<!-- Tautan tersembunyi untuk pengguna keyboard/pembaca layar: langsung ke isi halaman -->
 <a class="sr-only" href="#isi">Lewati ke konten</a>
+<!-- ===== HEADER ATAS: logo, menu (tablet/desktop), lonceng notifikasi ===== -->
 <header class="site-head">
   <div class="wrap">
     <a class="logo" href="../index.html" aria-label="Kompas Filkom, ke Beranda"><span class="logo-word" aria-hidden="true">k<svg class="logo-o" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="#14213D" stroke-width="3.4"/><path d="M8.6 15.4 15.6 8.4" stroke="#F0600C" stroke-width="2.6" stroke-linecap="round"/></svg>mpas</span><span class="logo-sub" aria-hidden="true"><b>Fil</b>kom</span></a>
@@ -23,6 +29,7 @@
     </div>
   </div>
 </header>
+<!-- Kotak notifikasi: muncul saat lonceng diklik (atribut popover) -->
 <div id="notif" class="notif" popover>
   <h2>Notifikasi</h2>
   <ul>
@@ -30,24 +37,33 @@
     <li><a href="../riwayat.html#tiket-scope-2026">SCOPE 2026</a> hari Sabtu pukul 10.30. Tiketmu ada di Riwayat.<small>Kam, 22 Okt</small></li>
   </ul>
 </div>
+<!-- Header khusus HP: tombol kembali + judul -->
 <header class="m-head wrap">
   <a class="icon-btn" href="../jelajah.html" aria-label="Kembali ke Jelajah"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
   <p class="m-head-title">Detail event</p>
 </header>
+<!-- ===== ISI DETAIL EVENT ===== -->
 <main id="isi" class="wrap page detail">
   <a class="back-link d-only" href="../jelajah.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Kembali ke Jelajah</a>
+  <!-- Dua kolom (tablet/desktop): isi di kiri, kartu pendaftaran di kanan -->
   <div class="detail-grid">
     <div class="detail-main">
+      <!-- Kotak judul: tanggal, jenis, judul event, badge -->
       <section class="hero">
         <div class="hero-top"><span class="date" aria-hidden="true"><b>28</b><span>Okt</span></span><div><p class="jenis">Workshop</p><p class="meta">Rabu, 28 Oktober 2026</p></div></div>
         <h1 class="h1">Artropolis 2026: Workshop Italian Charm Bracelet</h1>
         <span class="badges"><span class="badge badge-warn"><span aria-hidden="true">!</span> Kuota terbatas</span><span class="badge badge-neutral">Berbayar Rp55.000</span></span>
       </section>
+      <!-- Info waktu, tempat, pemateri (versi HP) -->
       <ul class="info m-only"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><div><b>Rab, 28 Okt 2026 · 12.10–14.20 WIB</b><small>Rangkaian Artropolis 2026</small></div></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><b>Gedung Kreativitas Mahasiswa (GKM) Lantai 3</b><small>FILKOM UB, Malang</small></div></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><div><small>Pemateri</small><b>Instruktur Artropolis 2026</b></div></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 19.5a6.5 6.5 0 0 1 13 0M15.5 4.8a3.5 3.5 0 0 1 0 6.4M17.5 13.6a6.5 6.5 0 0 1 4 5.9"/></svg><div><small>Diselenggarakan oleh</small><b>Panitia Artropolis 2026</b></div></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12V4.5a1 1 0 0 1 1-1H12l8.5 8.5-8.5 8.5z"/><circle cx="8" cy="8" r="1.5"/></svg><div><small>Biaya</small><b>Mulai Rp55.000</b></div></li></ul>
+      <!-- Poster (kalau ada) -->
       
+      <!-- Bagian isi: Tentang event, Materi, Yang perlu disiapkan, Narahubung -->
       <section class="block"><h2 class="h2">Tentang event</h2><p>Asah keterampilan tanganmu lewat workshop Italian charm bracelet di Artropolis 2026. Semua bahan sudah disediakan, kamu tinggal datang dan berkarya.</p><p>Selain workshop, ada Art Exhibition Artropolis 2026 pada 27 dan 28 Oktober di GKM lantai 1, 3, dan 4, gratis dan terbuka untuk umum. Kamu bebas mengajak siapa pun.</p></section><section class="block"><h2 class="h2">Yang kamu dapat</h2><ul class="dots"><li>Perlengkapan dan bahan baku lengkap (all included).</li><li>Sesi belajar interaktif bersama instruktur.</li><li>Hasil karya bisa dibawa pulang.</li><li>Teman baru, relasi, dan pengalaman berkesan.</li></ul></section><section class="block"><h2 class="h2">Yang perlu disiapkan</h2><ul class="dots"><li>HTM Rp55.000 per orang (on the spot +Rp5.000).</li><li>Tiket di menu Riwayat. Tunjukkan ke panitia saat registrasi ulang.</li></ul></section><section class="block"><h2 class="h2">Narahubung &amp; tautan</h2><ul class="contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Alfito: <a href="https://wa.me/6281511654891">+62 815-1165-4891</a></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Roychanul: <a href="https://wa.me/6287778383272">+62 877-7838-3272</a></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg><span>Registrasi panitia: <a href="https://clips.id/RegistrationWorkshopArtropolis2026" target="_blank" rel="noopener">clips.id/RegistrationWorkshopArtropolis2026</a></span></li></ul></section>
     </div>
     <aside class="detail-aside" aria-label="Pendaftaran">
+      <!-- Kartu kanan: info (versi desktop) + kotak aksi pendaftaran.
+           Di HP kotak aksi menempel di bawah layar. -->
       <div class="aside-card">
         <ul class="info d-only"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><div><b>Rab, 28 Okt 2026 · 12.10–14.20 WIB</b><small>Rangkaian Artropolis 2026</small></div></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><b>Gedung Kreativitas Mahasiswa (GKM) Lantai 3</b><small>FILKOM UB, Malang</small></div></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><div><small>Pemateri</small><b>Instruktur Artropolis 2026</b></div></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 19.5a6.5 6.5 0 0 1 13 0M15.5 4.8a3.5 3.5 0 0 1 0 6.4M17.5 13.6a6.5 6.5 0 0 1 4 5.9"/></svg><div><small>Diselenggarakan oleh</small><b>Panitia Artropolis</b></div></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12V4.5a1 1 0 0 1 1-1H12l8.5 8.5-8.5 8.5z"/><circle cx="8" cy="8" r="1.5"/></svg><div><small>Biaya</small><b>Mulai Rp55.000</b></div></li></ul>
         <div class="aksi aksi-daftar">
@@ -64,7 +80,9 @@
     </aside>
   </div>
 </main>
+<!-- ===== FOOTER (tablet/desktop) ===== -->
 <footer class="site-foot d-only"><div class="wrap">Kompas Filkom dikelola Fakultas Ilmu Komputer, Universitas Brawijaya.</div></footer>
+<!-- ===== MENU BAWAH (khusus HP) ===== -->
 <div class="dock"><nav class="bottom-nav" aria-label="Menu utama"><a href="../index.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/></svg><span>Beranda</span></a><a href="../jelajah.html" aria-current="page"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><span>Jelajah</span></a><a href="../riwayat.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Riwayat</span></a></nav></div>
 </body>
 </html>
